@@ -1,6 +1,6 @@
 # neural-net
 Neural net API implemented from scratch using NumPy.
-Currently supports fully-connected and softmax layers. I'll maybe add convolutional layers at some point in the future. 
+Currently supports fully connected and softmax layers. I'll maybe add convolutional layers at some point in the future. 
 
 ## Prerequisites
 
@@ -16,15 +16,15 @@ The library was tested on the following datasets:
 - [Banknote Authentication](https://archive.ics.uci.edu/ml/datasets/banknote+authentication)
 - [Sonar (Mines vs. Rocks)](http://archive.ics.uci.edu/ml/datasets/connectionist+bench+(sonar,+mines+vs.+rocks))
 
-Here's a sample of some "raw" results achieved with this library, with no particular fine-tuning :
+Here's a sample of some "raw" results achieved with this library, with no particular fine-tuning. Keep in mind this is only using a fully connected model :
 
-Dataset      | L2 Factor | Test Accuracy | Train Accuracy
--------------|-------:|---------:|---:
-MNIST        | 0.5 |  97.60 %  | 98.64 %
-KMNIST       | 0.5 |  87.57 %  | 98.07 %
-Fashion-MNIST| 0.5 |  88.42 %  | 92.23 %
-Banknote     | 0.0 |  99.27 %  | 99.27 %
-Sonar        | 0.1 |  85.37 % | 87.95 %
+Dataset      |Classes| L2 Factor | Test Accuracy | Train Accuracy
+-------------|---:|-------:|---------:|---:
+MNIST        | 10|0.5 |  97.60 %  | 98.64 %
+KMNIST       | 10|0.5 |  87.57 %  | 98.07 %
+Fashion-MNIST| 10|0.5 |  88.42 %  | 92.23 %
+Banknote     | 2|0.0 |  99.27 %  | 99.27 %
+Sonar        | 2|0.1 |  85.37 % | 87.95 %
 
 All the above results are the lowest test error achieved over 200 epochs with a learning rate of 0.01, SGD and this architecture :
 ```python
